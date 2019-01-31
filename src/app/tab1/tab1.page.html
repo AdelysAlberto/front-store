@@ -1,3 +1,4 @@
+<ion-content>
 <ion-grid fixed (load)="getMotos()">
     <ion-row>
         <ion-col class="font-color-white background-primary">
@@ -10,15 +11,16 @@
         </ion-col>
     </ion-row>
     <ion-card *ngIf="data" padding="2">
+        <form  id="form">
         <ion-row >
                 <ion-col size-sm="6" size-xs="12">
                     <ion-item>
-                        <ion-input placeholder="Nombre"></ion-input>
+                        <ion-input placeholder="Nombre" name="nombre"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col size-sm="6" size-xs="12">
                     <ion-item>
-                        <ion-select placeholder="Modelo">
+                        <ion-select placeholder="Modelo" name="modelo">
                             <ion-select-option value="Honda">Honda</ion-select-option>
                             <ion-select-option value="Mazda">Mazda</ion-select-option>
                         </ion-select>
@@ -26,7 +28,7 @@
                 </ion-col>
                 <ion-col size-sm="6" size-xs="12">
                     <ion-item>
-                        <ion-select placeholder="Modelo">
+                        <ion-select placeholder="Cilindrada" name="cilindrada">
                             <ion-select-option value="220c">220cc</ion-select-option>
                             <ion-select-option value="850c">850cc</ion-select-option>
                         </ion-select>
@@ -36,7 +38,7 @@
         <ion-row>
             <ion-col size-sm="6" size-xs="12">
                 <ion-item>
-                    <ion-select placeholder="Color">
+                    <ion-select placeholder="Color" name="color">
                         <ion-select-option value="azul">Azul</ion-select-option>
                         <ion-select-option value="verde">Verde</ion-select-option>
                     </ion-select>
@@ -44,14 +46,15 @@
             </ion-col>
             <ion-col size-sm="6" size-xs="12">
                 <ion-item>
-                    <ion-input placeholder="Precio"></ion-input>
+                    <ion-input placeholder="Precio" name="precio"></ion-input>
                 </ion-item>
             </ion-col>
         </ion-row>
         <ion-row>
-            <ion-button color="light" margin-horizontal="1">Guardar</ion-button>
+            <ion-button type="submit" (click)="sendPost()" color="light" margin-horizontal="1">Guardar</ion-button>
             <ion-button color="light" (click)="cancelAdd()">Cancelar</ion-button>
         </ion-row>
+        </form>
     </ion-card>
 
     <ion-row class="border-bottom border-grey-light border" margin-bottom="2" margin-top="2">
@@ -74,17 +77,16 @@
             <ion-img class="icons-crud" src="assets/configurations.png"></ion-img>
         </ion-col>
     </ion-row>
-    <ion-row *ngFor="let data of listData" padding="2" margin-bottom="2" class="border border-bottom border-dark-alpha">
-        <ion-col size="3">{{data.nombre}}</ion-col>
-        <ion-col size="2">{{data.modelo}}</ion-col>
-        <ion-col size="2">{{data.cilindrada}}</ion-col>
-        <ion-col size="2">{{data.color}}</ion-col>
-        <ion-col size="2">{{data.precio}}</ion-col>
-        <ion-col size="1" class="justify-content-end d-flex">
-            <ion-img alt="" id="{{data.id}}" class="icons-crud" src="assets/edit-16x16.png"></ion-img>
-            <ion-img alt="" id="{{data.id}}" class="icons-crud" src="assets/delete-16x16.png"></ion-img>
-        </ion-col>
-    </ion-row>
-
-
+            <ion-row *ngFor="let data of listData"  padding="2" margin-bottom="2" class="border border-bottom border-dark-alpha">
+                <ion-col size="3">{{data.nombre}}</ion-col>
+                <ion-col size="2">{{data.modelo}}</ion-col>
+                <ion-col size="2">{{data.cilindrada}}</ion-col>
+                <ion-col size="2">{{data.color}}</ion-col>
+                <ion-col size="2">{{data.precio}}</ion-col>
+                <ion-col size="1" class="justify-content-end d-flex">
+                    <ion-img alt="" id="{{data.id}}" class="icons-crud" src="assets/edit-16x16.png"></ion-img>
+                    <ion-img alt="" id="{{data.id}}" class="icons-crud" src="assets/delete-16x16.png"></ion-img>
+                </ion-col>
+            </ion-row>
 </ion-grid>
+</ion-content>

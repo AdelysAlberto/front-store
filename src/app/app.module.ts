@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouteReuseStrategy } from '@angular/router';
 import { HTTP } from '@ionic-native/http/ngx';
 import { HttpClientModule } from '@angular/common/http';
-import {ProvidersService} from './providers.service'
+import {ProvidersService} from './providers.service';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
