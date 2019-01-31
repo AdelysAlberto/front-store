@@ -12,6 +12,7 @@ export class ProvidersService {
   }
 
   getMotos() {
+    // @ts-ignore
     this.http.get(this.url).pipe(tap((res:HttpResponse)  => console.log(res)));
   }
 

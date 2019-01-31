@@ -18,13 +18,19 @@ export class Tab1Page {
     console.log("Private HTTP")
   }
   listData=[];
+  data=false;
   getMotos(){
     this.http.get('http://localhost:3000/list').subscribe((response) => {
       this.listData=response.data;
     });
 
   }
-
+  addInput() {
+      this.data=true;
+  }
+  cancelAdd() {
+    this.data=false;
+  }
 
 
 }
