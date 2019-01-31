@@ -75,3 +75,170 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+/* BORDERS */
+/** Border sizes **/
+
+.border {
+  border: 1px #e5e5e5 solid;
+}
+
+.border-medium {
+  border: 3px solid;
+}
+
+.border-huge {
+  border: 7px solid;
+}
+/** Border positions */
+
+.border-bottom {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.border-disable-bottom {
+  border-bottom: 0px !important;
+}
+
+.border-disable-top {
+  border-top: 0px !important;
+}
+
+.border-left {
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.border-right {
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.border-top {
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+
+
+/** Border colors **/
+.border-light {
+  border-color: rgb(190,190,190);
+}
+
+.border-light-alpha {
+  border-color: rgba(190,190,190,0.6);
+}
+
+.border-dark {
+  border-color: rgb(0,0,0);
+}
+
+.border-dark-alpha {
+  border-color: rgba(0,0,0,0.6);
+}
+
+.border-grey {
+  border-color: #9E9E9E;
+}
+
+.border-grey-light{
+  border-color: #E0E0E0;
+}
+
+.border-highlight {
+  border-color: #6ec6ff;}
+
+.border-primary {
+  border-color: #00659B;}
+
+.border-light-alpha {
+  border-color: rgba(190,190,190,0.6);
+}
+
+.border-green {
+  border-color: rgb(151,206,26);
+}
+
+.border-transparent{
+  border-color: transparent !important;
+}
+/** Border radius **/
+.border-radius {
+  border-radius: 3px;
+}
+
+.border-circle {
+  border-radius: 50%;
+}
+
+.border-radius-disabled {
+  border-radius: 0 !important;
+}
+
+/** Border style **/
+.border-dashed {
+  border-style: dashed;
+}
+
+/* SHADOWS */
+.shadow {
+  box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.6);
+}
+
+.shadow-bottom{
+  box-shadow:  0px 4px 1px -1px rgba(128, 128, 128, 0.6);
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-start {
+  justify-content: start;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.align-items-start {
+  align-items: start;
+}
+.align-items-end {
+  align-items: end;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-content-start{
+  align-content: start;
+}
+.align-content-end{
+  align-content: end;
+}
+.align-content-center{
+  align-content: center;
+}
